@@ -24,7 +24,6 @@
  */
 
 // ИМПОРТЫ БИБЛИОТЕК
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef, useCallback } from 'react';

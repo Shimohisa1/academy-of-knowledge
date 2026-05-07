@@ -1,12 +1,10 @@
 import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-// @ts-ignore: side-effect CSS import may not have type declarations
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-  document.getElementById("root")
+  </StrictMode>
 );
