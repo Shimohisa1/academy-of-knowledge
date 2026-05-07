@@ -400,10 +400,10 @@ const webinars: Webinar[] = [
 
 /** Изображения для слайдера на главной странице */
 const sliderImages = [
-  'https://images.unsplash.com/photo-1562774053-701939374585?w=1200&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=500&fit=crop',
-  'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=500&fit=crop'
+  '/images/slider/sl1.png',
+  '/images/slider/sl2.png',
+  '/images/slider/sl3.png',
+  '/images/slider/sl4.png',
 ];
 
 /** Часто задаваемые вопросы (FAQ) */
@@ -646,11 +646,12 @@ function Header({ onOpenAuth, user, onLogout }: { onOpenAuth: () => void; user: 
         <div className="flex items-center justify-between h-16">
           {/* Логотип */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-blue-500 font-medium text-sm">Академия Знаний</span>
-            <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-            </svg>
+          <img 
+                  src="./images/logo2.png" 
+                  alt="Академия Знаний" 
+                  className="w-8 h-8"
+                />
+            <span className="text-blue-500 font-medium text-sm">Академия <br /> Знаний</span>
           </Link>
           
           {/* Навигация */}
@@ -707,11 +708,12 @@ function Footer() {
           {/* Информация о компании */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="font-medium text-sm text-white">Академия Знаний</span>
-              <svg className="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-              </svg>
+               <img 
+                src="./images/logo3.png" 
+                alt="Академия Знаний" 
+                className="w-8 h-8"
+              />
+              <span className="font-medium text-sm text-white">Академия <br /> Знаний</span>
             </div>
             <p className="text-slate-400 text-sm max-w-xs">Современная образовательная платформа с государственной аккредитацией.</p>
           </div>
@@ -1030,7 +1032,7 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
             <h1 className="text-5xl font-serif text-slate-900 inline-flex items-center gap-3">
               АКАДЕМИЯ ЗНАНИЙ
                 <img 
-                  src="/logo.png" 
+                  src="./images/logo.png" 
                   alt="Академия Знаний" 
                   className="w-10 h-10"
                 />
