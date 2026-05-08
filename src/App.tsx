@@ -400,10 +400,10 @@ const webinars: Webinar[] = [
 
 /** Изображения для слайдера на главной странице */
 const sliderImages = [
-  '/images/slider/sl1.png',
-  '/images/slider/sl2.png',
-  '/images/slider/sl3.png',
-  '/images/slider/sl4.png',
+  'public/images/slider/sl1.png',
+  'public/images/slider/sl2.png',
+  'public/images/slider/sl3.png',
+  'public/images/slider/sl4.png',
 ];
 
 /** Часто задаваемые вопросы (FAQ) */
@@ -647,7 +647,7 @@ function Header({ onOpenAuth, user, onLogout }: { onOpenAuth: () => void; user: 
           {/* Логотип */}
           <Link to="/" className="flex items-center gap-2">
           <img 
-                  src="/images/logo2.png" 
+                  src="public/images/logo2.png" 
                   alt="Академия Знаний" 
                   className="w-8 h-8"
                 />
@@ -709,7 +709,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
                <img 
-                src="/images/logo3.png" 
+                src="public/images/logo3.png" 
                 alt="Академия Знаний" 
                 className="w-8 h-8"
               />
