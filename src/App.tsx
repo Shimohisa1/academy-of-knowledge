@@ -371,12 +371,12 @@ const questions: Question[] = [
 
 /** Статьи для базы знаний */
 const articles: Article[] = [
-  { id: '1', title: 'Как поступить на курс: пошаговая инструкция', category: 'Гайды', readTime: '5 минут', excerpt: 'Подробное руководство по записи на курс.', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop', content: 'Шаг 1: Выберите курс в каталоге. Шаг 2: Нажмите кнопку "Записаться". Шаг 3: Заполните форму заявки. Шаг 4: Оплатите обучение. Шаг 5: Получите доступ к платформе и начните учиться!' },
-  { id: '2', title: 'Data Scientist: профессия будущего', category: 'Обзоры профессий', readTime: '8 минут', excerpt: 'Что делает Data Scientist.', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop', content: 'Data Scientist — это специалист, который анализирует большие данные и строит прогнозные модели. Средняя зарплата от 150 000 рублей.' },
-  { id: '3', title: 'Frontend-разработчик: путь от новичка до профи', category: 'Обзоры профессий', readTime: '10 минут', excerpt: 'Как стать Frontend-разработчиком.', image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&h=400&fit=crop', content: 'Frontend-разработчик создаёт пользовательские интерфейсы. Изучайте HTML, CSS, JavaScript, React.' },
-  { id: '4', title: 'Как эффективно учиться онлайн: 10 советов', category: 'Гайды', readTime: '6 минут', excerpt: 'Проверенные методики для обучения.', image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop', content: '1. Составьте расписание. 2. Делайте перерывы. 3. Практикуйтесь. 4. Задавайте вопросы. 5. Повторяйте материал.' },
-  { id: '5', title: 'Digital-маркетолог: навыки и карьера', category: 'Обзоры профессий', readTime: '7 минут', excerpt: 'Что входит в работу digital-маркетолога.', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop', content: 'Digital-маркетолог продвигает бренды в интернете. Нужны знания SMM, таргета, аналитики.' },
-  { id: '6', title: 'Графический дизайнер: творчество и технологии', category: 'Обзоры профессий', readTime: '9 минут', excerpt: 'Обзор профессии дизайнера.', image: 'https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=600&h=400&fit=crop', content: 'Графический дизайнер создаёт визуальный контент. Изучайте Photoshop, Illustrator, Figma.' }
+  { id: '1', title: 'Как поступить на курс: пошаговая инструкция', category: 'Гайды', readTime: '5 минут', excerpt: 'Подробное руководство по записи на курс.', image: '/images/learnbase/lb1.jpg', content: 'Шаг 1: Выберите курс в каталоге. Шаг 2: Нажмите кнопку "Записаться". Шаг 3: Заполните форму заявки. Шаг 4: Оплатите обучение. Шаг 5: Получите доступ к платформе и начните учиться!' },
+  { id: '2', title: 'Data Scientist: профессия будущего', category: 'Обзоры профессий', readTime: '8 минут', excerpt: 'Что делает Data Scientist.', image: '/images/learnbase/lb2.png', content: 'Data Scientist — это специалист, который анализирует большие данные и строит прогнозные модели. Средняя зарплата от 150 000 рублей.' },
+  { id: '3', title: 'Frontend-разработчик: путь от новичка до профи', category: 'Обзоры профессий', readTime: '10 минут', excerpt: 'Как стать Frontend-разработчиком.', image: '/images/learnbase/lb3.jpg', content: 'Frontend-разработчик создаёт пользовательские интерфейсы. Изучайте HTML, CSS, JavaScript, React.' },
+  { id: '4', title: 'Как эффективно учиться онлайн: 10 советов', category: 'Гайды', readTime: '6 минут', excerpt: 'Проверенные методики для обучения.', image: '/images/learnbase/lb4.png', content: '1. Составьте расписание. 2. Делайте перерывы. 3. Практикуйтесь. 4. Задавайте вопросы. 5. Повторяйте материал.' },
+  { id: '5', title: 'Digital-маркетолог: навыки и карьера', category: 'Обзоры профессий', readTime: '7 минут', excerpt: 'Что входит в работу digital-маркетолога.', image: '/images/learnbase/lb5.png', content: 'Digital-маркетолог продвигает бренды в интернете. Нужны знания SMM, таргета, аналитики.' },
+  { id: '6', title: 'Графический дизайнер: творчество и технологии', category: 'Обзоры профессий', readTime: '9 минут', excerpt: 'Обзор профессии дизайнера.', image: '/images/learnbase/lb6.jpg', content: 'Графический дизайнер создаёт визуальный контент. Изучайте Photoshop, Illustrator, Figma.' }
 ];
 
 /** Термины для глоссария */
@@ -715,7 +715,7 @@ function Footer() {
               />
               <span className="font-medium text-sm text-white">Академия <br /> Знаний</span>
             </div>
-            <p className="text-slate-400 text-sm max-w-xs">Современная образовательная платформа с государственной аккредитацией.</p>
+            <p className="text-slate-400 text-sm max-w-xs">Современная образовательная платформа с государственной аккредитацией. Получайте качественное образование 24/7 в удобном формате.</p>
           </div>
           {/* Навигация */}
           <div>
@@ -730,9 +730,9 @@ function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Контакты</h3>
             <ul className="space-y-2 text-slate-400">
-              <li className="flex items-center gap-2">📞 +7 (946) 123-45-67</li>
-              <li className="flex items-center gap-2">✉️ AcademyofKnowledge@mail.ru</li>
-              <li className="flex items-center gap-2">📍 г. Самара, Московское шоссе, 125А</li>
+              <li className="flex items-center gap-2"><img src="/images/phone.png" alt="Телефон" className="w-4 h-4" /> +7 (946) 123-45-67</li>
+              <li className="flex items-center gap-2"><img src="/images/email.png" alt="Email" className="w-4 h-4" /> AcademyofKnowledge@mail.ru</li>
+              <li className="flex items-center gap-2"><img src="/images/location.png" alt="Адрес" className="w-4 h-4" /> г. Самара, Московское шоссе, 125А</li>
             </ul>
           </div>
         </div>
@@ -860,11 +860,21 @@ function CourseMatcherPage({ onOpenConsultation }: { onOpenConsultation: () => v
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
-            <h1 className="text-5xl font-serif text-blue-500 mb-4">Подбор программы обучения</h1>
-            <p className="text-slate-600 text-lg">Мы подобрали <span className="text-green-500 font-semibold underline">{matchedCourses.length} программы</span></p>
-          </motion.div>
-
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12 text-center">
+          <h1 className="text-5xl font-serif text-blue-500 mb-12">
+            Подбор программы обучения
+          </h1>            
+          <h2 className="text-3xl font-serif text-slate-600 mb-2 text-left">
+            Подходящие курсы для вас
+          </h2>
+          <p className="text-slate-600 text-left">
+            Мы подобрали{" "}
+            <span className="border-b-2 border-green-500 text-slate-700d">
+              {matchedCourses.length} программы
+            </span>
+            , соответствующие вашим критериям
+          </p>
+        </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="space-y-6">
             {matchedCourses.map(({ course, match }, index) => (
               <motion.div key={course.id} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}
@@ -887,7 +897,7 @@ function CourseMatcherPage({ onOpenConsultation }: { onOpenConsultation: () => v
                     whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => navigate(`/course/${course.id}`)}>
                     Подробнее о курсе
                   </motion.button>
-                  <motion.button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl font-medium"
+                  <motion.button className="bg-[#10B981] hover:brightness-90 text-white px-8 py-3 rounded-xl font-medium"
                     whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     Записаться
                   </motion.button>
@@ -1039,11 +1049,10 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
                 <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
             </h1>
           </motion.div>
-          
           {/* Слайдер изображений */}
           <div className="relative rounded-2xl overflow-hidden">
             <AnimatePresence mode="wait">
-              <motion.img key={currentSlide} src={sliderImages[currentSlide]} alt="Академия" className="w-full h-96 object-cover"
+              <motion.img key={currentSlide} src={sliderImages[currentSlide]} alt="Академия" className="w-full h-[500px] object-cover"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} />
             </AnimatePresence>
             {/* Кнопки навигации слайдера */}
@@ -1076,15 +1085,50 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-8">Образование, доступное 24/7</motion.h2>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {['Государственная аккредитация', 'Современная онлайн-платформа', 'Практико-ориентированные курсы', 'Библиотека материалов', 'Поддержка кураторов', 'Опытные преподаватели'].map((feature, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow cursor-default" whileHover={{ y: -5 }}>
-                <h3 className="text-xl font-serif text-slate-900 mb-3">{feature}</h3>
-                <p className="text-slate-600 text-sm">Описание преимущества образовательной платформы.</p>
+          {[
+          {
+            title: 'Государственная аккредитация',
+            description: 'Дипломы государственного образца, признаваемые по всей России'
+          },
+          {
+            title: 'Современная онлайн-платформа',
+            description: 'Удобная платформа для обучения с любого устройства в любое время'
+          },
+          {
+            title: 'Практико-ориентированные курсы',
+            description: 'Программы, разработанные с учетом требований работодателей'
+          },
+          {
+            title: 'Библиотека материалов',
+            description: 'Пожизненный доступ к учебным материалам после завершения обучения'
+          },
+          {
+            title: 'Поддержка кураторов',
+            description: 'Персональное сопровождение на протяжении всего обучения'
+          },
+          {
+            title: 'Опытные преподаватели',
+            description: 'Кандидаты и доктора наук, практикующие специалисты'
+          }
+            ].map((feature, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeInUp}
+                className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow cursor-default"
+                whileHover={{ y: -5 }}
+              >
+                <h3 className="text-xl font-serif text-slate-900 mb-3">
+                  {feature.title}
+                </h3>
+
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </motion.section>
+                      </motion.div>
+                    </div>
+                  </motion.section>
 
 {/* СЕКЦИЯ НАПРАВЛЕНИЙ ОБУЧЕНИЯ */}
 <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16 bg-white">
@@ -1151,9 +1195,13 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
                     className="w-full p-6 flex items-center justify-between bg-white hover:bg-slate-50 transition-colors"
                   >
                     <span className="text-lg text-slate-900 text-left">{faq.q}</span>
-                    <motion.svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" animate={{ rotate: isOpen ? 180 : 0 }}>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </motion.svg>
+                    <motion.img
+                    src="/images/plus.png"
+                    alt="Открыть"
+                    className="w-6 h-6"
+                    animate={{ rotate: isOpen ? 135 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  />
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
@@ -1189,7 +1237,9 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-2">Новости и статьи</motion.h2>
               <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-slate-600">Следите за последними новостями института</motion.p>
             </div>
-            <button className="px-5 py-2.5 border border-slate-200 rounded-xl bg-white text-slate-700transition-all hover:bg-[#3B82F633]"> Все новости </button>
+            <Link to="/knowledge-base">
+              <button className="px-5 py-2.5 border border-slate-200 rounded-xl bg-white text-slate-700transition-all hover:bg-[#3B82F633]"> Все новости </button>
+            </Link>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {news.map((item, idx) => (
@@ -1268,7 +1318,7 @@ function CatalogPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <h1 className="text-5xl font-serif text-blue-500 mb-4">Каталог курсов</h1>
-          <p className="text-blue-500 text-lg">Найдите идеальную программу</p>
+          <p className="text-blue-500 text-lg">Найдите идеальную программу для своего развития</p>
         </motion.div>
         
         {/* Поисковая строка */}
@@ -1442,7 +1492,7 @@ function KnowledgeBasePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <h1 className="text-5xl font-serif text-blue-500 mb-4">База знаний</h1>
-          <p className="text-blue-500 text-lg">Полезные материалы</p>
+          <p className="text-blue-500 text-lg">Полезные материалы для успешного обучения и развития карьеры</p>
         </motion.div>
         
         {/* СЕКЦИЯ СТАТЕЙ */}
@@ -1459,7 +1509,7 @@ function KnowledgeBasePage() {
                   </div>
                   <h3 className="font-semibold text-slate-900 mb-2">{article.title}</h3>
                   <p className="text-slate-500 text-sm mb-4">{article.excerpt}</p>
-                  <Link to={`/article/${article.id}`} className="text-blue-500 hover:text-blue-600 font-medium text-sm">Читать →</Link>
+                  <Link to={`/article/${article.id}`} className="text-blue-500 hover:text-blue-600 font-medium text-sm">Читать</Link>
                 </div>
               </motion.div>
             ))}
@@ -1534,12 +1584,12 @@ function ArticlePage() {
           <img src={article.image} alt={article.title} className="w-full h-64 object-cover rounded-2xl mb-6" />
           <div className="flex items-center gap-4 mb-4">
             <span className="bg-blue-100 text-blue-500 text-xs px-3 py-1 rounded-full">{article.category}</span>
-            <span className="text-slate-400 text-sm">⏱️ {article.readTime}</span>
+            <span className="text-slate-400 text-sm">{article.readTime}</span>
           </div>
           <h1 className="text-4xl font-serif text-slate-900 mb-6">{article.title}</h1>
           <div className="prose prose-lg text-slate-600">
             <p>{article.content}</p>
-            <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p className="mt-4"></p>
           </div>
         </motion.article>
       </div>
