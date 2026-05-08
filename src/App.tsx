@@ -416,9 +416,9 @@ const faqs = [
 
 /** Новости для главной страницы */
 const news = [
-  { title: 'Новые программы повышения квалификации в области IT', desc: 'Мы запустили 5 новых программ для IT-специалистов: Python-разработка, Data Science, Кибербезопасность и другие...', date: '28 марта 2026', category: 'Новости', image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop', id: 'news1' },
-  { title: 'Расписание вебинаров на май 2026', desc: 'Приглашаем на бесплатные вебинары для абитуриентов. Узнайте больше о наших программах, задайте вопросы...', date: '20 апреля 2026', category: 'События', image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop', id: 'news2' },
-  { title: 'Как онлайн-образование меняет карьерные возможности', desc: 'Статья от нашего ректора о том, как дистанционное обучение открывает новые горизонты для профессионального развития...', date: '20 марта 2026', category: 'Статьи', image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600&h=400&fit=crop', id: 'news3' }
+  { title: 'Новые программы повышения квалификации в области IT', desc: 'Мы запустили 5 новых программ для IT-специалистов: Python-разработка, Data Science, Кибербезопасность и другие...', date: '28 марта 2026', category: 'Новости', image: 'images/news/news1.jpg', id: 'news1' },
+  { title: 'Расписание вебинаров на май 2026', desc: 'Приглашаем на бесплатные вебинары для абитуриентов. Узнайте больше о наших программах, задайте вопросы...', date: '20 апреля 2026', category: 'События', image: 'images/news/news2.jpg', id: 'news2' },
+  { title: 'Как онлайн-образование меняет карьерные возможности', desc: 'Статья от нашего ректора о том, как дистанционное обучение открывает новые горизонты для профессионального развития...', date: '20 марта 2026', category: 'Статьи', image: 'images/news/news3.jpg', id: 'news3' }
 ];
 
 // ============================================================================
@@ -1086,34 +1086,50 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
         </div>
       </motion.section>
 
-      {/* СЕКЦИЯ НАПРАВЛЕНИЙ ОБУЧЕНИЯ */}
-      <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-2">Направления обучения</motion.h2>
-          <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-slate-600 mb-8">Выберите программу</motion.p>
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: 'Программы переподготовки', img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop' },
-              { title: 'Курсы повышения квалификации', img: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=600&h=400&fit=crop' },
-              { title: 'Высшее образование', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop' },
-              { title: 'Дополнительное образование', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop' }
-            ].map((program, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="border border-blue-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow" whileHover={{ scale: 1.02 }}>
-                <img src={program.img} alt={program.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h3 className="font-semibold text-slate-900 mb-2">{program.title}</h3>
-                  <p className="text-slate-600 text-sm mb-4">Описание направления обучения.</p>
-                  <motion.button className="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 py-2 rounded-lg transition-colors"
-                    whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => navigate('/catalog')}>
-                    Подробнее
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
+{/* СЕКЦИЯ НАПРАВЛЕНИЙ ОБУЧЕНИЯ */}
+<motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-2">Направления обучения</motion.h2>
+    <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-slate-600 mb-8">Выберите программу, которая соответствует вашим целям</motion.p>
+    
+    <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {[
+        { 
+          title: 'Программы профессиональной переподготовки', 
+          img: 'images/learnway/ca1.png',
+          description: 'Получите новую специальность за 3-6 месяцев с выдачей диплома государственного образца'
+        },
+        { 
+          title: 'Курсы повышения квалификации', 
+          img: 'images/learnway/ca2.png',
+          description: 'Актуализируйте знания и получите удостоверение о повышении квалификации'
+        },
+        { 
+          title: 'Высшее образование', 
+          img: 'images/learnway/ca3.png',
+          description: 'Бакалавриат и магистратура по актуальным направлениям подготовки'
+        },
+        { 
+          title: 'Дополнительное образование', 
+          img: 'images/learnway/ca4.png',
+          description: 'Разнообразные курсы для взрослых и детей по развитию навыков и хобби'
+        }
+      ].map((program, idx) => (
+        <motion.div key={idx} variants={fadeInUp} className="border border-blue-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow flex flex-col" whileHover={{ scale: 1.02 }}>
+          <img src={program.img} alt={program.title} className="w-full h-48 object-cover" />
+          <div className="p-6 flex flex-col flex-1">
+            <h3 className="font-semibold text-slate-900 mb-2">{program.title}</h3>
+            <p className="text-slate-600 text-sm mb-4">{program.description}</p>
+            <motion.button className="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 py-2 rounded-lg transition-colors mt-auto"
+              whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => navigate('/catalog')}>
+              Подробнее
+            </motion.button>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</motion.section>
       {/* СЕКЦИЯ FAQ (ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ) */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1168,22 +1184,26 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
       {/* СЕКЦИЯ НОВОСТЕЙ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-start justify-between mb-8">
             <div>
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-2">Новости и статьи</motion.h2>
-              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-slate-600">Следите за новостями</motion.p>
+              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-slate-600">Следите за последними новостями института</motion.p>
             </div>
+            <button className="px-5 py-2.5 border border-slate-200 rounded-xl bg-white text-slate-700transition-all hover:bg-[#3B82F633]"> Все новости </button>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {news.map((item, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="border border-slate-100 rounded-xl overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                 whileHover={{ y: -5 }} onClick={() => navigate(`/article/${item.id}`)}>
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <span className="inline-block bg-blue-500 text-white text-xs px-2 py-1 rounded-full mb-3">{item.category}</span>
+                <div className="relative">
+                <img src={item.image} alt={item.title} className="w-full h-48 object-cover"/>
+                <span className="absolute top-4 left-4 bg-blue-500 text-white text-xs px-3 py-1 rounded-full"> {item.category} </span>
+                </div>
+          <div className="p-6 flex flex-col h-[260px]">
                   <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
-                  <p className="text-slate-600 text-sm mb-4">{item.desc}</p>
-                  <span className="text-slate-400 text-xs">📅 {item.date}</span>
+                  <p className="text-slate-600 text-sm mb-4"> {item.desc} </p>
+                  <span className="text-slate-400 text-xs mt-auto flex items-center">
+                  <img src='images/calendar.png' alt="Дата" className="inline-block mr-2 w-4 h-4" /> {item.date}</span>
                 </div>
               </motion.div>
             ))}
@@ -1194,21 +1214,23 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
       {/* СЕКЦИЯ КОНТАКТОВ */}
       <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-8">Контакты</motion.h2>
+          {/* <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-8">Контакты</motion.h2> */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Текстовая информация */}
             <div>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl font-serif text-slate-900 mb-8">Контакты</motion.h2>
               <p className="text-lg text-slate-900 mb-4">443111, г. Самара, Московское шоссе, 125А</p>
-              <div className="mb-6"><h3 className="text-slate-500 font-medium mb-2">Режим работы</h3><p className="text-slate-700">Пн-Пт 8:30-17:00, обед 13:00-13:30</p></div>
+              <div className="mb-6"><h3 className="text-slate-500 font-medium mb-2">Режим работы</h3><p className="text-slate-700">Понедельник–пятница с 8:30 до 17:00, <br  /> перерыв на обед с 13:00 до 13:30</p></div>
               <div className="mb-6"><h3 className="text-slate-500 font-medium mb-2">Email</h3><p className="text-slate-700">AcademyofKnowledge@mail.ru</p></div>
               <div className="mb-6"><h3 className="text-slate-500 font-medium mb-2">Телефон</h3><p className="text-slate-700">+7 (946) 123-45-67</p></div>
+              <div className="mb-6"><h3 className="text-slate-500 font-medium mb-2">Есть вопросы?</h3><p className="text-slate-700">За консультацией по образовательным <br /> услугам обращаться по телефону:</p></div>
               <motion.button className="bg-slate-50 hover:bg-slate-100 text-slate-900 px-6 py-3 rounded-xl transition-colors"
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={onOpenAuth}>+7 (946) 123-45-67</motion.button>
             </div>
             {/* Google Maps Embed */}
-            <div className="rounded-xl overflow-hidden h-96 bg-slate-100">
+            <div className="rounded-xl overflow-hidden h-[500px] bg-slate-100">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.57!2d50.123!3d53.234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDE0JzAyLjQiTiA1MMKwMDcnMjIuOCJF!5e0!3m2!1sru!2sru!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2387.8202432270796!2d50.20842334840396!3d53.238998532909164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661938dd516f03%3A0xea94d2ac4356b0fe!2z0JzQvtGB0LrQvtCy0YHQutC-0LUg0YguLCAxMjXQkCwg0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7LiwgNDQzMTEx!5e0!3m2!1sru!2sru!4v1778230585153!5m2!1sru!2sru"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
