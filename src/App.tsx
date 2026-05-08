@@ -1032,7 +1032,7 @@ function HomePage({ onOpenAuth }: { onOpenAuth: () => void }) {
             <h1 className="text-5xl font-serif text-slate-900 inline-flex items-center gap-3">
               АКАДЕМИЯ ЗНАНИЙ
                 <img 
-                  src="/images/logo.png" 
+                  src="public/images/logo.png" 
                   alt="Академия Знаний" 
                   className="w-10 h-10"
                 />
