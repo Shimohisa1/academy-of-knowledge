@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * ============================================================================
  * АКАДЕМИЯ ЗНАНИЙ - Образовательная платформа
@@ -1614,6 +1615,29 @@ export default function App() {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   // Загрузка пользователя из localStorage при старте приложения
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+import { Header, Footer } from './components/layout';
+import { AuthModal, ConsultationModal } from './components/ui';
+import {
+  HomePage,
+  CatalogPage,
+  CourseDetailPage,
+  KnowledgeBasePage,
+  CourseMatcherPage,
+  ArticlePage,
+} from './pages';
+
+import type { User } from './types';
+
+export default function App() {
+  const [user, setUser] = useState<User | null>(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
+>>>>>>> 5408e3c (update)
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
@@ -1621,12 +1645,18 @@ export default function App() {
     }
   }, []);
 
+<<<<<<< HEAD
   /** Обработка успешного входа */
+=======
+>>>>>>> 5408e3c (update)
   const handleLogin = (loggedInUser: User) => {
     setUser(loggedInUser);
   };
 
+<<<<<<< HEAD
   /** Обработка выхода */
+=======
+>>>>>>> 5408e3c (update)
   const handleLogout = () => {
     localStorage.removeItem('user');
     setUser(null);
@@ -1635,10 +1665,19 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
+<<<<<<< HEAD
         {/* Шапка сайта */}
         <Header onOpenAuth={() => setIsAuthModalOpen(true)} user={user} onLogout={handleLogout} />
         
         {/* Основной контент (маршруты) */}
+=======
+        <Header
+          onOpenAuth={() => setIsAuthModalOpen(true)}
+          user={user}
+          onLogout={handleLogout}
+        />
+
+>>>>>>> 5408e3c (update)
         <main>
           <Routes>
             <Route path="/" element={<HomePage onOpenAuth={() => setIsAuthModalOpen(true)} />} />
@@ -1649,6 +1688,7 @@ export default function App() {
             <Route path="/article/:id" element={<ArticlePage />} />
           </Routes>
         </main>
+<<<<<<< HEAD
         
         {/* Подвал сайта */}
         <Footer />
@@ -1656,6 +1696,20 @@ export default function App() {
         {/* Модальные окна */}
         <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} onLogin={handleLogin} />
         <ConsultationModal isOpen={isConsultationModalOpen} onClose={() => setIsConsultationModalOpen(false)} />
+=======
+
+        <Footer />
+
+        <AuthModal
+          isOpen={isAuthModalOpen}
+          onClose={() => setIsAuthModalOpen(false)}
+          onLogin={handleLogin}
+        />
+        <ConsultationModal
+          isOpen={isConsultationModalOpen}
+          onClose={() => setIsConsultationModalOpen(false)}
+        />
+>>>>>>> 5408e3c (update)
       </div>
     </Router>
   );
